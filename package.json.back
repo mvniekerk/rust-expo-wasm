@@ -1,5 +1,0 @@
-{
-   "scripts": 
-      "build_rust": "cd rust-wasm && rm -rf pkg target && wasm-pack build --target no_modules && wasm-pack pack"	
-   }
-}
