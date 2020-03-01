@@ -1,10 +1,15 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
+// import { greet } from 'rust-wasm';
+const g = import('rust-wasm');
 
 export default function App() {
+  const onPress = async () => {
+    await g.then(gg => gg.greet());
+  };
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Button title="Call wasm" onPress={onPress}><Text>Call wasm</Text></Button>
     </View>
   );
 }

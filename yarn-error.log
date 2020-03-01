@@ -1,0 +1,35 @@
+Arguments: 
+  /opt/local/bin/node /opt/local/libexec/yarn/bin/yarn.js build_rust
+
+PATH: 
+  /Users/mike/sdk/google-cloud-sdk/bin:/Users/mike/Library/Android/sdk/platform-tools/:/Users/mike/.cargo/bin:/opt/local/bin:/opt/local/sbin:/Users/mike/.yarn/bin:/Users/mike/.config/yarn/global/node_modules/.bin:/Users/mike/.sdkman/candidates/micronaut/current/bin:/Users/mike/.sdkman/candidates/maven/current/bin:/Users/mike/.sdkman/candidates/java/current/bin:/Users/mike/.sdkman/candidates/gradle/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/mike/Documents/koperfontein/rust-expo-io/expo/node_modules/.bin
+
+Yarn version: 
+  1.17.3
+
+Node version: 
+  10.16.3
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/mike/Documents/koperfontein/rust-expo-io/package.json: Unexpected token : in JSON at position 35
+      at JSON.parse (<anonymous>)
+      at /opt/local/libexec/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/opt/local/libexec/yarn/lib/cli.js:304:30)
+      at /opt/local/libexec/yarn/lib/cli.js:315:13
+
+npm manifest: 
+  {
+     "scripts": 
+        "build_rust": "cd rust-wasm && rm -rf pkg target && wasm-pack build --target no_modules && wasm-pack pack"	
+     }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
